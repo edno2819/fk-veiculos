@@ -1,0 +1,99 @@
+.infosDetail {
+    width: 300px;
+    border-radius: 10px;
+    background-color: #fadb58;
+    padding: 15px;
+    box-shadow: 5px aliceblue;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+.Title {
+    font-size: 1.2em;
+    font-weight: bold;
+
+}
+
+.Prices {
+    text-decoration: none;
+    margin: 0;
+}
+
+.PriceOld {
+    font-size: 1em;
+    text-decoration-line: line-through;
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+.Price {
+    font-size: 1.4em;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.infosDetail hr {
+    height: 2px;
+    color: rgba(0, 0, 0, 0.712);
+    opacity: 1;
+}
+
+
+.Payments {
+}
+
+.Subtitle {
+    margin-top: 15px;
+    font-size: 1.3em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.Payments li {
+    list-style-type: none;
+  }
+
+.Payments img {
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+}
+
+.InfoIcons {
+    display: flex;
+    flex-wrap: wrap;
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 7px;
+}
+
+
+
+
+.InfoIcons div {
+    width: 130px;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+}
+
+
+@media (max-width: 860px) {
+    .infosDetail {
+        width: var(--max-with-img);
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 605px) {
+    .infosDetail {
+        width: var(--max-with-img);
+        margin-left: 0px;
+
+    }
+}

@@ -1,0 +1,169 @@
+.Navbar {
+    width: 100vw;
+    max-height: 100px;
+    height: 12vh;
+    background: #000000;
+    color: #ffffff;
+    position: fixed;
+    z-index: 2;
+
+}
+
+.Navbar nav {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0px 20px 0px 20px;
+    overflow: hidden;
+    color: #fff;
+    justify-content: flex-start;
+    align-items: center;
+    border-style: solid;
+    border-color: rgba(255, 0, 0, 0.418);
+    border-width: 0px 0px 1px 0px;
+}
+
+.logo {
+    height: 100%;
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.menu {
+    flex-grow: 3;
+}
+
+.menu a {
+    text-transform: uppercase;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    text-decoration: dashed;
+    font-weight: bold;
+}
+
+.menu a:first-letter {
+    font-size: 10px;
+}
+
+.contato {
+    display: flex;
+    height: 60%;
+    width: 162px;
+    align-items: center !important;
+    justify-content: center;
+    padding: 8px 18px 5px 18px;
+    background-color: #E0E2E4;
+    letter-spacing: .01em;
+    margin-right: 15px;
+}
+
+.contato:hover {
+    height: 65%;
+    width: 170px;
+}
+
+.contato a {
+    display: flex;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.contato a img {
+    width: auto;
+    height: 85%;
+    align-self: center;
+    margin-right: 4px;
+}
+
+.contato a i {
+    width: auto;
+    height: 85%;
+    align-self: center;
+    margin-right: 4px;
+}
+
+
+.mensagem {
+    height: 100%;
+    display: block;
+    color: black;
+
+}
+
+.mensagem span {
+    line-height: 15px;
+    font-size: .8rem;
+    text-decoration: none;
+}
+
+.mensagem p {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 15px;
+}
+
+
+.fa-whatsapp {
+    color: #fff;
+    background:
+        linear-gradient(#25d366, #25d366) 14% 84%/16% 16% no-repeat,
+        radial-gradient(#25d366 58%, transparent 0);
+}
+
+
+@media (max-width: 1055px) {
+    .Navbar nav {
+        justify-content: center;
+    }
+
+    .menu {
+        display: none;
+    }
+}
+
+@media (max-width: 680px) {
+    .logo {
+        height: 80%;
+        width: auto;
+        margin-left: 0px;
+
+    }
+
+    .contato {
+        height: 60%;
+        width: 50px;
+        padding: 0px;
+        margin-right: 10px;
+        background-color: hsla(0, 0%, 95%, 0);
+
+        border-radius: 7px;
+        border-style: solid;
+        border-color: rgba(255, 24, 24, 0.808);
+        border-width: 1px;
+    }
+
+    .contato a img {
+        height: 80%;
+        margin: 0px;
+        margin-left: 3px;
+    }
+
+    .contato a {
+        margin: 0;
+        padding: 0;
+    }
+
+    .mensagem {
+        display: none;
+    }
+
+    .contato a i {
+        margin-right: 0px;
+        color: rgb(216, 16, 16);
+    }
+
+}

@@ -1,0 +1,13 @@
+.CarroselPhotos .slick-slider {
+    height: 100%;
+}
+
+.CarroselPhotos .slick-list {
+    height: 100%;
+}
+
+.CarroselPhotos .slick-track {
+    height: 80%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}

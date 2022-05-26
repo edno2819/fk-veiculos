@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <g id="conta_giros" data-name="conta giros" transform="translate(-4.667 -5)">
+    <rect id="Retângulo_3582" data-name="Retângulo 3582" width="36" height="36" transform="translate(4.667 5)" fill="none"/>
+    <g id="conta_giros-2" data-name="conta giros" transform="translate(8 8)">
+      <rect id="Retângulo_3582-2" data-name="Retângulo 3582" width="31" height="30" transform="translate(-0.333 0)" fill="none"/>
+      <g id="_001-speedometer" data-name="001-speedometer" transform="translate(7 6)">
+        <path id="Caminho_3887" data-name="Caminho 3887" d="M8.833,17.667A8.833,8.833,0,1,0,0,8.833,8.852,8.852,0,0,0,8.833,17.667ZM3.766,14.756a6.8,6.8,0,0,1,10.135,0,7.782,7.782,0,0,1-10.135,0Zm-.637-6.44A5.7,5.7,0,0,1,4.436,5.168l.7.7.732-.732-.7-.7A5.7,5.7,0,0,1,8.316,3.129V4.141H9.351V3.129A5.7,5.7,0,0,1,12.5,4.436l-.7.7.732.732.7-.7a5.7,5.7,0,0,1,1.307,3.148H13.526V9.35h1.011a5.766,5.766,0,0,1-1.464,3.35,7.842,7.842,0,0,0-8.479,0,5.766,5.766,0,0,1-1.464-3.35H4.141V8.316Zm5.7-7.281a7.794,7.794,0,0,1,5.808,13,7.749,7.749,0,0,0-.734-.711A6.767,6.767,0,1,0,2.07,8.833,6.813,6.813,0,0,0,3.759,13.32a7.748,7.748,0,0,0-.734.711,7.794,7.794,0,0,1,5.808-13Zm0,0" fill="#2f2f2f"/>
+        <path id="Caminho_3888" data-name="Caminho 3888" d="M211,392h3.105v1.035H211Zm0,0" transform="translate(-203.719 -378.474)" fill="#2f2f2f"/>
+        <path id="Caminho_3889" data-name="Caminho 3889" d="M167.572,169.709a1.553,1.553,0,1,0,2.134-2.134l-.027-.016-3.894-1.77,1.77,3.893Zm1.617-1.236a.518.518,0,1,1-.719.719l-.6-1.318Zm0,0" transform="translate(-160.065 -160.068)" fill="#2f2f2f"/>
+      </g>
+    </g>
+  </g>
+</svg>

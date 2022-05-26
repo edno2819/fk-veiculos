@@ -1,0 +1,70 @@
+.ReactModal__Overlay{
+    background-color:rgba(0, 0, 0, 0.87) !important ;
+}
+
+
+.slick-thumb {
+    position: relative;
+    display: flex !important;
+    width: 80px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    bottom: 10px !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    /* padding: 0; */
+    margin-top: 5px;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+
+.slick-thumb li{
+    margin: 2px  1px 2px 2px !important;
+    width: 80px;
+    height: 100%;
+    flex: none;
+}
+
+.slick-thumb .slick-active{
+    border-style: solid;
+    border-color: #ffffffda;
+    border-width: 3px;
+}
+
+/* --------- arrow ---------------------------------- */
+
+.slick-prev{
+    left: -19px
+}
+
+.slick-next{
+    right: -19px
+}
+
+@media (max-width: 605px) {
+    .CarDetail_slider__HXICw .slick-arrow{
+        display: none !important;
+    }
+}
+
+
+/* --------- scroll bar ---------------------------------- */
+
+.ReactModal__Overlay  ::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+}
+/* Handle */
+.ReactModal__Overlay  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 0, 0, 0.726);
+    border-radius: 3px;
+}
+
+/* Handle on hover */
+.ReactModal__Overlay  ::-webkit-scrollbar-thumb:hover {
+    background: #b31b00;
+}

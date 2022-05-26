@@ -1,0 +1,182 @@
+.divMain {
+    background-color: var(--background-color);
+    width: 100vw;
+    display: flex;
+    margin-bottom: 15vh;
+    color: #1e1e1e;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+/* -------------- title --------------------- */
+.title {
+    max-width: 30vw;
+    margin-right: 30px;
+}
+
+.title h1 {
+    color: rgb(255, 255, 255);
+    margin-right: calc(var(--space-button-scroll) + 20px);
+    margin-bottom: 70px;
+    font: 300 4vw 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+
+
+}
+
+/* -------------- card car --------------------- */
+
+.slider {
+    width: 680px;
+    height: 450px;
+}
+
+.dotsImg img {
+    height: 100%;
+    width: 100%;
+}
+
+
+.cardCar {
+    width: 600px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 10px 5px 10px;
+    border-radius: 15px;
+    overflow-y: hidden;
+    margin-left: 0px;
+
+}
+
+.cardCar img {
+    width: 100%;
+    height: auto;
+}
+
+.infosCard {
+    opacity: 0;
+    position: relative;
+    background-color: #070707dc;
+    padding: 10px;
+    border-radius: 7px;
+
+
+}
+
+.nameInfo {
+    display: block;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 25px;
+    font-family: "Bitstream Vera Sans Mono";
+    margin-bottom: 7px;
+
+}
+
+.infoButton {
+    display: block;
+    background-color: rgb(223, 0, 0);
+    border-style: hidden;
+    border-radius: 10px;
+    font-weight: bold;
+    height: 30px;
+    color: white;
+    padding: 0px 7px 0px 7px;
+
+}
+
+
+/* -------------- card car hover --------------------- */
+
+.cardCar:hover {
+    overflow-x: visible !important;
+
+}
+
+.cardCar:hover .infosCard {
+    position: absolute;
+    transform: translatex(30px) translatey(-210%);
+    transition: 1s;
+    opacity: 1;
+}
+
+
+/* -------------- Mobile --------------------- */
+@media (max-width: 1056px) {
+    .slider {
+        width: 90%;
+        height: auto;
+    }
+
+    .title {
+        max-width: 80vw;
+        margin-right: 0px;
+        padding: 0px;
+
+    }
+
+    .title h1 {
+        font: 300 5vw 'Oswald', sans-serif;
+    }
+
+    .cardCar {
+        width: 90%;
+        height: auto;
+        margin: 5px 10px 5px 10px;
+        border-radius: 15px;
+        margin-left: 0px;
+    }
+}
+
+
+@media (max-width: 650px) {
+    .slider {
+        width: 90%;
+        height: auto;
+    }
+
+    .title h1 {
+        font: 300 6vw 'Oswald', sans-serif;
+        text-align: center;
+    }
+
+
+    .cardCar {
+        width: 90%;
+        height: auto;
+        margin: 5px 10px 5px 10px;
+        border-radius: 15px;
+        margin-left: 0px;
+    }
+
+    .infosCard {
+        opacity: 1;
+        background-color: #0d53d400;
+        padding: 5px;
+        border-radius: 7px;
+
+        position: absolute;
+        transform: translatex(10px) translatey(-70px);
+    }
+
+    .nameInfo {
+        font-size: 1.1em;
+        margin-bottom: 5px;
+
+    }
+
+    .infoButton {
+        border-radius: 5px;
+        height: 20px;
+        padding: 0px 7px 0px 7px;
+
+    }
+
+}
