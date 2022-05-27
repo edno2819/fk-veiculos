@@ -147,6 +147,17 @@
         text-align: center;
     }
 
+    .Subtitle {
+        width: 100%;
+        text-align: center;
+        border-bottom: 3px solid rgb(255, 255, 255);
+    }
+
+    .Subtitle span {
+        background: var(--backgroundMain);
+        padding: 0 30px;
+    }
+
 
     .cardCar {
         width: 90%;

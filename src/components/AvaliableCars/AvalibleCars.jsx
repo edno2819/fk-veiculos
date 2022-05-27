@@ -31,7 +31,6 @@ const AvalibleCars = () => {
 
             <div className={styles.title}>
                 <h1>Carros Disponíveis</h1>
-
             </div>
 
             <Slider className={styles.slider} {...settings}>

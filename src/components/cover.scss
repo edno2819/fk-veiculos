@@ -1,20 +1,3 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    position: relative;
-}
-
-html,
-body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-size: 3vmin;
-}
-
-
 .divMain {
     height: 100vh;
     width: 100vw;
@@ -24,6 +7,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    position: relative;
 }
 
 .slides {
@@ -65,44 +55,50 @@ body {
     }
 }
 
-.slide {
-    // transform-style: preserve-3d;
-    // border: solid 1px rgb(0, 0, 0);
+// .slide {
+//     transform-style: preserve-3d;
+//     border: solid 1px rgb(0, 0, 0);
 
-    // &[data-active] {
-    //   .slideContent > * {
-    //     transform: none;
-    //     opacity: 1;
-    //   }
-    // }
-}
+//     &[data-active] {
+//       .slideContent > * {
+//         transform: none;
+//         opacity: 0;
+//       }
+//     }
+// }
 
 .slideContent {
-    width: 30vw;
-    height: 40vw;
+    width: 33vw;
+    height: 35vw;
     background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: repeat-x;
     transition: transform 0.5s ease-in-out;
     opacity: 0.7;
+
+    border-style: solid;
+    border-color: rgb(240, 248, 255);
+    border-width: 2px;
 
     display: grid;
     align-content: center;
 
     transform-style: preserve-3d;
-    transform: perspective(1000px) translateX(calc(100% * var(--offset))) rotateY(calc(-45deg * var(--dir)));
+    transform: perspective(1500px) translateX(calc(110% * var(--offset))) rotateY(calc(-35deg * var(--dir)));
 }
 
 .slideContentInner {
     transform-style: preserve-3d;
-    transform: translateZ(2rem);
+    transform: translateZ(3rem);
     transition: opacity 0.3s linear;
     text-shadow: 0 0.1rem 1rem #000;
     opacity: 0;
+    margin-top: 60%;
 
     .slideSubtitle,
     .slideTitle {
-        font-size: 2rem;
+        color: aliceblue;
+        font-size: 2em;
         font-weight: normal;
         letter-spacing: 0.2ch;
         text-transform: uppercase;
@@ -114,14 +110,16 @@ body {
     }
 
     .slideDescription {
+        color: rgb(255, 255, 255);
         margin: 0;
-        font-size: 0.8rem;
-        letter-spacing: 0.2ch;
+        font-size: 1.2em;
+        letter-spacing: 0.1ch;
+        font-weight: 550;
     }
 }
 
 .slideBackground {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: -10%;
     right: -10%;
@@ -137,7 +135,7 @@ body {
 }
 
 .slide[data-active] {
-    z-index: 2;
+    z-index: 1;
     pointer-events: auto;
 
     .slideBackground {
@@ -160,5 +158,19 @@ body {
             transition: none;
             transform: perspective(1000px) rotateY(calc(var(--x) * 45deg)) rotateX(calc(var(--y) * -45deg));
         }
+    }
+}
+
+@media (max-width: 1050px) {
+
+    .divMain {
+        height: auto;
+        margin-bottom: 10vh;
+
+    }
+
+    .slideContent {
+        width: 50vw;
+        height: 50vh;
     }
 }

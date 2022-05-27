@@ -21,45 +21,42 @@ const InforCar = () => {
             <p className={styles.Prices}>De: <b className={styles.PriceOld}>R$ 200.900,00</b></p>
             <p className={styles.Prices}>Por: <a className={styles.Price}>R$ 175.900,00</a></p>
 
-
-            <h3 className={styles.Subtitle}>Detalhes do Veículo</h3>
+            <h2 className={styles.Subtitle}><span>Detalhes do Veículo</span></h2>
 
             <div className={styles.InfoIcons}>
                 <div>
-                    <img src={date} alt='icone'/>
+                    <img src={date} alt='icone' />
                     2019/2019
                 </div>
                 <div>
-                    <img src={km} alt='icone'/>
+                    <img src={km} alt='icone' />
                     53085 km
                 </div>
                 <div>
-                    <img src={fuel} alt='icone'/>
+                    <img src={fuel} alt='icone' />
                     Flex
                 </div>
                 <div>
-                    <img src={transmission} alt='icone'/>
+                    <img src={transmission} alt='icone' />
                     Automático
                 </div>
 
             </div>
-            
+
             <br />
 
             <div className={styles.Payments}>
-                <div>
-                    <h3 className={styles.Subtitle}>Métodos de Pagamentos</h3>
-                </div>
+                <h2 className={styles.Subtitle}><span>Pagamentos</span></h2>
 
                 <ul>
                     <li>
-                        <img src={financiamento} alt='icone'/>
+                        <img src={financiamento} alt='icone' />
                         Financiamento
                     </li>
                 </ul>
                 <ul>
                     <li>
-                        <img src={parcelas} alt='icone'/>
+                        <img src={parcelas} alt='icone' />
                         Até 15 Parcelas
                     </li>
                 </ul>

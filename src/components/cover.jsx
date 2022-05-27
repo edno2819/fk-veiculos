@@ -9,26 +9,28 @@ import taken from "../static/img/img4.jpeg";
 
 const slides = [
   {
-    title: "Machu Picchu",
-    subtitle: "Peru",
-    description: "Adventure is never far away",
+    title: "OS melhores para",
+    subtitle: "você!",
+    description: "24h 7 dias todos os dias por semana",
     image: astronaut
   },
   {
-    title: "Chamonix",
-    subtitle: "France",
-    description: "Let your dreams come true",
-    image:celebrating  },
+    title: "Entregando o seu",
+    subtitle: " sonho!",
+    // description: "Let your dreams come true",
+    image: celebrating
+  },
   {
-    title: "Mimisa Rocks",
-    subtitle: "Australia",
-    description: "A piece of heaven",
-    image:education  },
+    // title: "Satisfação",
+    subtitle: "fka",
+    description: "Nosso negócio é a sua satisfação",
+    image: education
+  },
   {
-    title: "Four",
-    subtitle: "Australia",
-    description: "A piece of heaven",
-    image:taken
+    // title: "Nossa equipe!",
+    // subtitle: "Australia",
+    // description: "A piece of heaven",
+    image: taken
   },
 
 ];
@@ -136,17 +138,21 @@ export default function CoverCarrosel() {
   const [state, dispatch] = React.useReducer(slidesReducer, initialState);
 
   return (
-    <div className="divMain">
+    <>
+      <h1 className="section-header">sobre nós</h1>
+      <div className="divMain">
 
-      <div className="slides">
-        <button onClick={() => dispatch({ type: "PREV" })}>‹</button>
 
-        {[...slides, ...slides, ...slides].map((slide, i) => {
-          let offset = slides.length + (state.slideIndex - i);
-          return <Slide slide={slide} offset={offset} key={i} />;
-        })}
-        <button onClick={() => dispatch({ type: "NEXT" })}>›</button>
+        <div className="slides">
+          <button onClick={() => dispatch({ type: "PREV" })}>‹</button>
+
+          {[...slides, ...slides, ...slides].map((slide, i) => {
+            let offset = slides.length + (state.slideIndex - i);
+            return <Slide slide={slide} offset={offset} key={i} />;
+          })}
+          <button onClick={() => dispatch({ type: "NEXT" })}>›</button>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

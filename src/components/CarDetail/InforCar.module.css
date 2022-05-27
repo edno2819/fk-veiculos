@@ -1,4 +1,7 @@
 .infosDetail {
+    --backgroundMain: #fadb58;
+
+
     width: 300px;
     border-radius: 10px;
     background-color: #fadb58;
@@ -29,7 +32,7 @@
 .Price {
     font-size: 1.4em;
     text-decoration: none;
-    color: black;
+    color: #859571;
     font-weight: bold;
 }
 
@@ -40,19 +43,29 @@
 }
 
 
-.Payments {
+.Subtitle {
+    width: 100%;
+    text-align: center;
+    border-bottom: 3px solid #000;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
-.Subtitle {
-    margin-top: 15px;
-    font-size: 1.3em;
-    text-align: center;
-    font-weight: bold;
+.Subtitle span {
+    background: var(--backgroundMain);
+    padding: 0 10px;
+}
+
+
+.Payments ul {
+    padding: 0;
 }
 
 .Payments li {
     list-style-type: none;
-  }
+}
 
 .Payments img {
     width: 35px;
