@@ -138,9 +138,9 @@ export default function CoverCarrosel() {
   const [state, dispatch] = React.useReducer(slidesReducer, initialState);
 
   return (
-    <>
+    <div className="divMain">
       <h1 className="section-header">sobre nós</h1>
-      <div className="divMain">
+      <div className="divMainSlider">
 
 
         <div className="slides">
@@ -153,6 +153,6 @@ export default function CoverCarrosel() {
           <button onClick={() => dispatch({ type: "NEXT" })}>›</button>
         </div>
       </div>
-    </>
+    </div>
   );
 }

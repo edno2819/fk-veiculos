@@ -218,6 +218,11 @@ hr {
         margin: 0 auto;
     }
 
+    .section-header {
+        padding: 40px 0;
+        font: 300 40px 'Oswald', sans-serif;
+    }
+
     #contact-form {
         width: 90%;
     }
@@ -269,7 +274,7 @@ hr {
 @media screen and (max-width: 410px) {
     .section-header {
         padding: 40px 0;
-        font: 300 50px 'Oswald', sans-serif;
+        font: 300 40px 'Oswald', sans-serif;
         letter-spacing: 4px;
     }
     .place {
