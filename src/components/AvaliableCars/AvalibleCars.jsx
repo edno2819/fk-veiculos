@@ -1,22 +1,15 @@
-import { React, useState } from "react"
+import { React, useState, useContext } from "react"
 import Slider from "react-slick";
+import { DadosCarros } from '../../contexts/CarContext'
 
 import styles from './AvalibleCars.module.css'
+
 
 import CarDetail from '../CarDetail/CarDetail'
 
 
-
-const links_car = [
-    'https://s3.amazonaws.com/adset.images/59bde6e8-e3cd-448b-9faa-71dd8a13974720220110201503.jpeg',
-    'https://s3.amazonaws.com/adset.images/d55c216f-2a77-4cce-9de9-78b9a8ab85a220211217202535.jpeg',
-    'https://s3.amazonaws.com/adset.images/ab8e7681-4234-4162-a49d-35811364887020220114201308.jpeg',
-    'https://s3.amazonaws.com/adset.images/ae6bd363-6b8c-4c61-8e46-9312feec2ec420220104200545.jpeg'
-]
-
-
-
 const AvalibleCars = () => {
+    const { carros, setCarros } = useContext(DadosCarros)
 
     const settings = {
         dots: false,
@@ -34,13 +27,13 @@ const AvalibleCars = () => {
             </div>
 
             <Slider className={styles.slider} {...settings}>
-                {links_car.map((link) => {
+                {carros.map((car) => {
                     return (
                         <div className={styles.cardCar}>
-                            <img src={link} alt='car' />
+                            <img src={car.imagens[0].picture} alt='car' />
                             <div className={styles.infosCard}>
-                                <span className={styles.nameInfo}>Civic honda 3.2 2016</span>
-                                <CarDetail />
+                                <span className={styles.nameInfo}>{car.titulo}</span>
+                                <CarDetail info_car={car}/>
                             </div>
                         </div>
                     )

@@ -1,12 +1,13 @@
 
 import Header from './components/Header';
 import PainelMain from './components/PainelMain'
-// import Carrosel from './components/CarroselPhotos/Carrosel'
 import AvalibleCars from './components/AvaliableCars/AvalibleCars'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-
 import CoverCarrosel from './components/cover'
+
+import ContactContext from './contexts/ContactContext'
+import CarContext from './contexts/CarContext'
 
 
 import './App.scss';
@@ -14,18 +15,19 @@ import './App.scss';
 function App() {
   return (
     <div className="App">
-      <Header />
-      <PainelMain />
-      <hr />
-      <AvalibleCars />
-      <hr />
-      <CoverCarrosel />
-      <hr />
-      <Contact />
-      <Footer />
-
-
-
+      <ContactContext>
+        <Header />
+        <PainelMain />
+        <hr />
+        <CarContext>
+          <AvalibleCars />
+        </CarContext>
+        <hr />
+        <CoverCarrosel />
+        <hr />
+        <Contact />
+        <Footer />
+      </ContactContext>
     </div>
 
   );

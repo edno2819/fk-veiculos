@@ -14,31 +14,31 @@ import parcelas from '../../static/icons/parcelas.png';
 
 
 
-const InforCar = () => {
+const InforCar = ( {info_car} ) => {
     return (
         <div className={styles.infosDetail}>
-            <h3 className={styles.Title}>HILUX 2.7 SRV 4X2 CD 16V FLEX 4P AUTOMÁTICO</h3>
-            <p className={styles.Prices}>De: <b className={styles.PriceOld}>R$ 200.900,00</b></p>
-            <p className={styles.Prices}>Por: <a className={styles.Price}>R$ 175.900,00</a></p>
+            <h3 className={styles.Title}>{info_car.titulo}</h3>
+            <p className={styles.Prices}>De: <b className={styles.PriceOld}>R$ {Math.round(info_car.preco*1.15)}</b></p>
+            <p className={styles.Prices}>Por: <a className={styles.Price}>R$ {info_car.preco}</a></p>
 
             <h2 className={styles.Subtitle}><span>Detalhes do Veículo</span></h2>
 
             <div className={styles.InfoIcons}>
                 <div>
                     <img src={date} alt='icone' />
-                    2019/2019
+                    {info_car.ano}
                 </div>
                 <div>
                     <img src={km} alt='icone' />
-                    53085 km
+                    {info_car.km} km
                 </div>
                 <div>
                     <img src={fuel} alt='icone' />
-                    Flex
+                    {info_car.combustivel}
                 </div>
                 <div>
                     <img src={transmission} alt='icone' />
-                    Automático
+                    {info_car.direção}
                 </div>
 
             </div>
@@ -57,7 +57,7 @@ const InforCar = () => {
                 <ul>
                     <li>
                         <img src={parcelas} alt='icone' />
-                        Até 15 Parcelas
+                        Até {info_car.parcelas} Parcelas
                     </li>
                 </ul>
 

@@ -29,14 +29,13 @@
 }
 
 .CloseButton {
-    width: 30px;
-    height: 30px;
     position: absolute;
-    right: 5%;
-    top: 0%;
-    background-color: rgba(89, 148, 13, 0.541);
-    opacity: 1;
-
+    right: 15px;
+    z-index: 5;
+    top: 2%;
+    background-color: rgba(255, 255, 255, 0.781);
+    border-radius: 12px;
+    padding-top: 2px;
 }
 
 /* -------------- card car --------------------- */
