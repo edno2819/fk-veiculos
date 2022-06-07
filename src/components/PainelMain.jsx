@@ -6,7 +6,7 @@ import styles from './PainelMain.module.css'
 const PainelMain = () => {
 
     return (
-        <div className={styles.divMain}>
+        <div id='home' className={styles.divMain}>
             <div className={styles.bannerImg}>
                 <img src={process.env.PUBLIC_URL + 'static/img/back-car.png'} alt=''/>
             </div>

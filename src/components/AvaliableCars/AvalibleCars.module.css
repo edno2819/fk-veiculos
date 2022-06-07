@@ -34,11 +34,6 @@
     height: 450px;
 }
 
-.dotsImg img {
-    height: 100%;
-    width: 100%;
-}
-
 
 .cardCar {
     width: 600px;
@@ -50,14 +45,14 @@
     align-items: center;
     margin: 5px 10px 5px 10px;
     border-radius: 15px;
-    overflow-y: hidden;
+    overflow: hidden;
     margin-left: 0px;
 
 }
 
 .cardCar img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .infosCard {
@@ -102,7 +97,7 @@
 
 .cardCar:hover .infosCard {
     position: absolute;
-    transform: translatex(30px) translatey(-210%);
+    transform: translatex(30px) translatey(-130%);
     transition: 1s;
     opacity: 1;
 }
@@ -111,7 +106,7 @@
 /* -------------- Mobile --------------------- */
 @media (max-width: 1056px) {
     .slider {
-        width: 90%;
+        width: 70%;
         height: auto;
     }
 
@@ -127,8 +122,8 @@
     }
 
     .cardCar {
-        width: 90%;
-        height: auto;
+        width: 100%;
+        height: 400px;
         margin: 5px 10px 5px 10px;
         border-radius: 15px;
         margin-left: 0px;
@@ -160,8 +155,8 @@
 
 
     .cardCar {
-        width: 90%;
-        height: auto;
+        width: 100%;
+        height: 250px;
         margin: 5px 10px 5px 10px;
         border-radius: 15px;
         margin-left: 0px;

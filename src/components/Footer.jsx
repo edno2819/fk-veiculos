@@ -7,7 +7,6 @@ import './Footer.css'
 
 const Footer = () => {
     const { contact, setContact } = useContext(DadosContatos)
-    console.log(contact.linkLocalizacao)
 
     return (
         <iframe src={contact.linkLocalizacao}

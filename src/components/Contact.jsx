@@ -1,11 +1,28 @@
-import React, { useContext } from "react"
+import React, { useState, useContext } from "react"
 import { DadosContatos } from '../contexts/ContactContext'
+import api from '../api'
 
 import './Contact.css'
 
 
 const Contact = () => {
     const { contact, setContact } = useContext(DadosContatos)
+    const [valueForm, setvalueForm] = useState({})
+
+
+    function handleChange(e) {
+        const { name, value } = e.target
+        setvalueForm({ ...valueForm, [name]: value })
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        const formData = new FormData(e.target)
+        const data = Object.fromEntries(formData)
+        api.post('mensagens', data)
+            .catch(response => { console.log(response) })
+        setvalueForm({})
+    }
 
     return (
         <section id="contact">
@@ -14,23 +31,21 @@ const Contact = () => {
 
             <div className="contact-wrapper">
 
-                <form id="contact-form" className="form-horizontal">
+                <form id="contact-form" onSubmit={handleSubmit} className="form-horizontal">
 
                     <div className="form-group">
                         <div className="col-sm-12">
-                            <input type="text" className="form-control" id="name" placeholder="NOME" name="name" value=""
-                                required />
+                            <input type="text" onChange={handleChange} className="form-control" id="name" placeholder="NOME" name="nome" value={valueForm['nome'] || ''} />
                         </div>
                     </div>
 
                     <div className="form-group">
                         <div className="col-sm-12">
-                            <input type="email" className="form-control" id="email" placeholder="EMAIL" name="email" value=""
-                                required />
+                            <input type="tel" onChange={handleChange} className="form-control" placeholder="WHATSAPP" name="whats" value={valueForm['whats'] || ''} />
                         </div>
                     </div>
 
-                    <textarea className="form-control" rows="10" placeholder="MESSAGE" name="Mensagem" required></textarea>
+                    <textarea onChange={handleChange} className="form-control" rows="10" placeholder="MENSAGEM" name="mensagem" value={valueForm['mensagem'] || ''} />
 
                     <button className="btn btn-primary send-button" id="submit" type="submit" value="SEND">
                         <div className="alt-send-button">

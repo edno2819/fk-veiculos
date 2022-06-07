@@ -1,10 +1,8 @@
-import { React, useState, useContext } from "react"
+import { React, useState } from "react"
 import Modal from "react-modal"
 import Slider from "react-slick";
 import CloseButton from 'react-bootstrap/CloseButton';
 import InforCar from './InforCar'
-
-import { DadosCarros } from '../../contexts/CarContext'
 
 import styles from './CarDetail.module.css'
 import './style.css'
@@ -14,8 +12,6 @@ Modal.setAppElement('#root')
 
 const CarDetail = ({ info_car }) => {
     const [ModalIsOpen, setModal] = useState(false)
-    const { carros, setCarros } = useContext(DadosCarros)
-    console.log(info_car)
 
 
     function handleSetModalOpen() {

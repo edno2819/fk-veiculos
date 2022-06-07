@@ -60,7 +60,7 @@
 /* -------------- dots img car and arrow--------------------- */
 
 .dotsImg img {
-    height: 100%;
+    height: 50px;
     width: 100%;
     cursor: pointer;
 
@@ -121,10 +121,14 @@
         margin-left: 0px;
 
     }
+    .cardCar {
+        width: 100%;
+        height: 230px;
+    }
 
     .cardCar img {
         width: 100%;
-        height: auto;
+        height: 100%;
     }
 
     .CloseButton {

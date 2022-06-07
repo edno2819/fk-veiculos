@@ -18,7 +18,6 @@ export default function ContactContext({ children }) {
         })
 
         api.get("carros/Indisponível" + "?format=json").then(({ data }) => {
-            console.log(data)
             setCarros(data)
         }).catch((error) => {
             console.log(error)

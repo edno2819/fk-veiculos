@@ -8,15 +8,20 @@ import { DadosContatos } from '../contexts/ContactContext'
 const Header = () => {
     const { contact, setContact } = useContext(DadosContatos)
 
+    const moveToContact = () => {
+        document.getElementById("contact").scrollIntoView();
+        window.scrollBy(0, -100);
+    }
+
     return (
         <div className={styles.Navbar}>
             <nav>
                 <img className={styles.logo} src={process.env.PUBLIC_URL + '/static/icons/logo.png'} alt="icone"/>
 
                     <div className={styles.menu}>
-                        <a href="#contact">Home</a>
-                        <a href="#contact">Sobre</a>
-                        <a href="#contact">Contato</a>
+                        <a href="#home">Home</a>
+                        <a href="#carros">Carros</a>
+                        <a href="#sobre">Sobre</a>
                         <a href="#localizacao">Localização</a>
                     </div>
 

@@ -11,7 +11,6 @@ export default function CarContext({ children }) {
 
     useEffect(() => {
         api.get("carros/Disponível" + "?format=json").then(({ data }) => {
-            console.log(data)
             setCarros(data)
         }).catch((error) => {
             console.log(error)

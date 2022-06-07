@@ -138,7 +138,7 @@ export default function CoverCarrosel() {
   const [state, dispatch] = React.useReducer(slidesReducer, initialState);
 
   return (
-    <div className="divMain">
+    <div id='sobre' className="divMain">
       <h1 className="section-header">sobre nós</h1>
       <div className="divMainSlider">
 

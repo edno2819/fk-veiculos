@@ -1,5 +1,3 @@
-console.log('teste edno')
-
 const { gsap, imagesLoaded } = window;
 
 const buttons = {
