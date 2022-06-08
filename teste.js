@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-axios.get('http://127.0.0.1:8000/contatos/')
+axios.get('https://fkaveiculos-backend.herokuapp.com/api/contatos/')
 .then(response => {
     console.log(response.data)
 })

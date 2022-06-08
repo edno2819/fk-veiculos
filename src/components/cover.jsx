@@ -11,7 +11,6 @@ const slides = [
   {
     title: "OS melhores para",
     subtitle: "você!",
-    description: "24h 7 dias todos os dias por semana",
     image: astronaut
   },
   {
