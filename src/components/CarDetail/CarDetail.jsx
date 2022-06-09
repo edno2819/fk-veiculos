@@ -3,6 +3,7 @@ import Modal from "react-modal"
 import Slider from "react-slick";
 import CloseButton from 'react-bootstrap/CloseButton';
 import InforCar from './InforCar'
+import Image from 'react-bootstrap/Image'
 
 import styles from './CarDetail.module.css'
 import './style.css'
@@ -20,6 +21,28 @@ const CarDetail = ({ info_car }) => {
 
     function handleSetModalClose() {
         setModal(false)
+    }
+
+    function checkImg(info_car) {
+        console.log(info_car.imagens.length)
+        if (info_car.imagens.length > 0) {
+            const c = info_car.imagens.map((link) => {
+                return (
+                    <div className={styles.cardCar}>
+                        <img src={link.picture} alt='car' />
+                    </div>
+                )
+            })
+            return c
+        } else {
+            const logo = require('../../static/img/error_car.png');
+
+            return (
+                <div className={styles.cardCar}>
+                    <Image src={logo} thumbnail={true} fluid={true} />
+                </div>
+            )
+        }
     }
 
     const settings = {
@@ -53,14 +76,7 @@ const CarDetail = ({ info_car }) => {
                     </div>
 
                     <Slider className={styles.slider} {...settings}>
-                        {info_car.imagens.map((link) => {
-                            return (
-                                <div className={styles.cardCar}>
-                                    <img src={link.picture} alt='car' />
-                                </div>
-                            )
-                        })}
-
+                        {checkImg(info_car)}
                     </Slider>
 
                     <InforCar info_car={info_car} />

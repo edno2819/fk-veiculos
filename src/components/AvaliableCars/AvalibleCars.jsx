@@ -10,6 +10,7 @@ import CarDetail from '../CarDetail/CarDetail'
 
 const AvalibleCars = () => {
     const { carros, setCarros } = useContext(DadosCarros)
+    console.log(carros)
 
     const settings = {
         dots: false,
@@ -18,6 +19,19 @@ const AvalibleCars = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
     };
+
+    function checkImg(car) {
+        try {
+            return <img src={car.imagens[0].picture} alt='car' />
+
+        } catch {
+            return (
+                <div style={{ background: 'white', width: '100%', height: '100%', textAlign: 'center' }}>
+                    <h2 style={{paddinTop: '40%'}}>Sem Imagem</h2>
+                </div>
+            )
+        }
+    }
 
     return (
         <div id='carros' className={styles.divMain}>
@@ -30,10 +44,10 @@ const AvalibleCars = () => {
                 {carros.map((car) => {
                     return (
                         <div className={styles.cardCar}>
-                            <img src={car.imagens[0].picture} alt='car' />
+                            {checkImg(car)}
                             <div className={styles.infosCard}>
                                 <span className={styles.nameInfo}>{car.titulo}</span>
-                                <CarDetail info_car={car}/>
+                                <CarDetail info_car={car} />
                             </div>
                         </div>
                     )
